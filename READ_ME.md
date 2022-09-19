@@ -11,3 +11,8 @@ NUM_NODE=1
 
 #### Then set
 EP_SIZE=64 
+#### Then we can enable 16 experts per GPU  
+the log is stored in 'gpt-0.125B-MoE64.log'  
+
+If you set EP_SIZE=1, then there is no experts. The model is dense.  
+the log is 'gpt-0.125B-no-MoE.log'   
