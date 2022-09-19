@@ -1,4 +1,4 @@
-# megatron-deepspeed-moe-bak  
+## megatron-deepspeed-moe
 ### MoE setting
 #### in ds_pretrain_gpt_125M_MoE64.sh
  NUM_GPUS=$(($(ds_ssh nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)-2))  
@@ -17,3 +17,8 @@ the log is stored in 'gpt-0.125B-MoE64.log'
 
 If you set EP_SIZE=1, then there is no experts. The model is dense.  
 the log is 'gpt-0.125B-no-MoE.log'   
+
+## megatron-deepspeed-moe-offload
+change the  
+    template_json="ds_config_gpt_TEMPLATE.json"   
+--> template_json="ds_config_gpt_Zero2_TEMPLATE.json"  
