@@ -1,4 +1,5 @@
-# megatron-deepspeed-moe-bak### MoE setting
+# megatron-deepspeed-moe-bak  
+### MoE setting
 #### in ds_pretrain_gpt_125M_MoE64.sh
  NUM_GPUS=$(($(ds_ssh nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)-2))  
  NUM_GPUS_PERNODE=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)  
